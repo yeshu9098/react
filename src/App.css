@@ -3,15 +3,19 @@ body{
   padding: 0;
   font-family: 'Times New Roman', Times, serif;
   letter-spacing: 5px;
+  margin-top: 50px;
 }
 
 .header{
   display: flex;
+  top: 0;
   justify-content: space-between;
   position: fixed;
   background-color: #fff;
   width: 100%;
+  z-index: 1;
 }
+
 .header ul{
   list-style: none;
   display: flex;
@@ -25,5 +29,61 @@ body{
 }
 
 .poster img{
+  position: relative;
+}
+
+.poster img {
+  width: 100;
+}
+
+.poster h1{
+  position: absolute;
+  bottom: 10px;
+  left: 3.5rem;
+}
+
+.main {
+  display: flex;
+  margin: 100px 100px;
+}
+
+.main img {
+  width: 400px;
+  margin-left: 70px;
+  margin-right: 50px;
+}
+
+.desc h1 {
+  text-align: center;
+  padding-bottom: 20px;
+  font-weight: 400;
+}
+
+.desc h3 {
+  text-align: center;
+  font-weight: 400;
+}
+
+.desc p {
+  letter-spacing: 2px;
+} 
+
+.about {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin: 4rem;
+  gap: 16px;
+}
+
+.about img {
   width: 100%;
+}
+
+.about-des h1{
+  text-align: center;
+}
+
+.about-des h5{
+  text-align: center;
+  font-size: 18px;
 }

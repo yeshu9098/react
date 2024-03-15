@@ -1,7 +1,7 @@
 import React from "react";
 
 function Poster(){
-    return(
+    return (
         <div className="poster">
             <img src="../../Images/hamburger.jpg"/>
         </div>
