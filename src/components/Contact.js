@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "./Button";
 
 const Contact = () => {
   return (
@@ -23,6 +24,9 @@ const Contact = () => {
           <input type="number" name="" id="" placeholder="How many people" />
           <input type="datetime-local" name="" id="" value="2020-11-16T20:00"/>
           <input type="text" name="" id="" placeholder="Message / Special Requirements" />
+
+          <Button/>
+          
         </form>
       </div>
     </>
