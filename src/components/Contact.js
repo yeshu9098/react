@@ -1,7 +1,18 @@
 import React from "react";
 import Button from "./Button";
+import { useState } from "react";
 
 const Contact = () => {
+
+  const [name, setName] = useState("");
+  
+  const handleChange = (e) =>{
+    // console.log(e.target.value)
+    setName(e.target.value);
+  }
+
+
+
   return (
     <>
       <div className="contact">
@@ -20,13 +31,12 @@ const Contact = () => {
           catering@catering.com, or you can send us a message here:
         </p>
         <form action="" method="post">
-          <input type="text" name="" id="" placeholder="Name" />
+          
+          <input type="text" name="" value={name} id="1" onChange={handleChange} placeholder="Name" />
           <input type="number" name="" id="" placeholder="How many people" />
           <input type="datetime-local" name="" id="" value="2020-11-16T20:00"/>
           <input type="text" name="" id="" placeholder="Message / Special Requirements" />
-
           <Button/>
-          
         </form>
       </div>
     </>
