@@ -4,12 +4,24 @@ import { useState } from "react";
 
 const Contact = () => {
 
-  const [name, setName] = useState("");
+  const [name, setName] = useState("Yeeshu");
   
   const handleChange = (e) =>{
-    // console.log(e.target.value)
+    console.log(e);
     setName(e.target.value);
   }
+
+  const [num, setNum] = useState()
+
+  const handleNumberChange = (e) =>{
+    setNum(e.target.value);
+  }
+
+  const clearMessage = () =>{
+    setName("");
+    setNum("")
+  }
+
 
 
 
@@ -31,12 +43,14 @@ const Contact = () => {
           catering@catering.com, or you can send us a message here:
         </p>
         <form action="" method="post">
-          
+        
           <input type="text" name="" value={name} id="1" onChange={handleChange} placeholder="Name" />
-          <input type="number" name="" id="" placeholder="How many people" />
-          <input type="datetime-local" name="" id="" value="2020-11-16T20:00"/>
+          
+          <input type="number" name="" value={num} id="" onChange={handleNumberChange} placeholder="How many people" />
+          <input type="datetime-local" name="" id="" />
           <input type="text" name="" id="" placeholder="Message / Special Requirements" />
           <Button/>
+          <button type="reset" onClick={clearMessage}>Clear</button>
         </form>
       </div>
     </>
