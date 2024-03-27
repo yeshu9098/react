@@ -186,3 +186,11 @@ footer {
   letter-spacing: 1px;
 }
 
+.hook {
+  margin: 50px; /* This will center the element horizontally */
+  border: 2px solid #000;
+  height: 200px;
+  display: flex;
+  justify-content: center; /* This will center the content horizontally within the flex container */
+  align-items: center; /* This will center the content vertically within the flex container */
+}

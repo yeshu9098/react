@@ -4,10 +4,10 @@ import { useState } from "react";
 
 const Contact = () => {
 
-  const [name, setName] = useState("Yeeshu");
+  const [name, setName] = useState("");
   
   const handleChange = (e) =>{
-    console.log(e);
+    // console.log(e);
     setName(e.target.value);
   }
 
@@ -17,7 +17,8 @@ const Contact = () => {
     setNum(e.target.value);
   }
 
-  const clearMessage = () =>{
+  const clearMessage = (e) =>{
+    e.preventDefault();
     setName("");
     setNum("")
   }
@@ -45,7 +46,6 @@ const Contact = () => {
         <form action="" method="post">
         
           <input type="text" name="" value={name} id="1" onChange={handleChange} placeholder="Name" />
-          
           <input type="number" name="" value={num} id="" onChange={handleNumberChange} placeholder="How many people" />
           <input type="datetime-local" name="" id="" />
           <input type="text" name="" id="" placeholder="Message / Special Requirements" />
